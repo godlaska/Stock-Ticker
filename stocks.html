@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSE 383 Final - Stocks</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="images/stock-favicon.png" type="image/png">
+
+    <!-- JavaScript libraries -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- Your custom JavaScript -->
+    <script src="ticker.js"></script>
+    <script src="login.js"></script>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <a class="navbar-brand" href="#">AFFC Stocks</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="keigen.html">Keigen</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="ethan.html">Ethan</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="stocks.html">Stocks</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="stocks_history.html">Stocks History</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" id="accountTab" href="login.html">Account</a> <!-- Add an id to the Account tab -->
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+    </div>
+
+    <div class="jumbotron jumbotron-fluid text-center" style="background-color: #124E66; color: #D3D9D4;">
+        <div class="container">
+            <h1 class="display-4">Stock Helper</h1>
+        </div>
+    </div>
+
+    <div class="container-fluid" id="stockPage">
+        <div class="row">
+            <div class="col-lg-9">
+                <!-- Left Column -->
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h1 id="stockHeader" class="clip-text">Stock Selection</h1>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12 d-flex justify-content-start">
+                        <button id="favoriteButton" class="btn btn-star" onclick="checkFavoriteStatus()">Favorite ✰</button>
+                        <p id="favoriteError" class="text-danger" style="display: none;"></p>
+                        <p id="favoriteMessage" style="display: none;"></p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-6">
+                        <h3 id="selectedExchange">Exchange: <span id="selectedExchangeSpan" class="chosen-span"></span></h3>
+                    </div>
+                    <div class="col-lg-6">
+                        <h3 id="selectedStock">Stock: <span id="selectedStockSpan" class="chosen-span"></span></h3>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="form-group">
+                            <select required id="exchangeDropdown" class="form-control">
+                                <option value="" hidden>Select A Stock Exchange</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="form-group">
+                            <select required id="tickerListing" class="form-control">
+                                <option value="" hidden>Select A Stock</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <p id="errorMessage" class="text-danger" style="display: none;"></p>
+                        <p id="refreshMessage" style="display: none"></p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-6 flexCenter">
+                        <h3 id="detailsHeader">Details</h3>
+                        <p id="openVal">Open: $</p>
+                        <p id="highVal">High: $</p>
+                        <p id="lowVal">Low: $</p>
+                        <p id="closeVal">Close: $</p>
+                        <p id="prevCloseDifference">Daily % Difference: </p>
+                        <p id="volume">Volume: </p>
+                    </div>
+                    <div class="col-lg-6 flexCenter">
+                        <h3 id="chartHeader">5-Day Chart</h3>
+                        <canvas id="stockChart"></canvas>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3">
+                <!-- Right Column -->
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h2 class="text-center" style="margin-top: 30px;">Favorited Tickers</h2>
+                        <div id="favoritesList"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid" id="stockPage">
+        <hr>
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h3 id="newsHeader">News</h3>
+                <div id="newsContainer" class="highlighted-block">
+                    <!-- News items will be appended here -->
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <br><br>
+    <div id="currentStockInfo">
+        <!-- A called stock's info will be displayed here -->
+    </div>
+    
+    <footer class="footer mt-auto py-3">
+        <div class="container">
+            <span class="text-muted">© 2024 Keigen Godlaski Ethan Varner</span>
+        </div>
+    </footer>
+    </body>
+    
+</html>

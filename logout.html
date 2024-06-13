@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta tags for character set and viewport -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Page title -->
+    <title>CSE 383 Final - Logout</title>
+    
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="images/stock-favicon.png" type="image/png">
+
+    <!-- JavaScript libraries -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- Your custom JavaScript -->
+    <script src="login.js"></script>
+</head>
+<body>
+    <!-- Navigation bar -->
+    <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <a class="navbar-brand" href="#">AFFC Stocks</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="keigen.html">Keigen</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="ethan.html">Ethan</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="stocks.html">Stocks</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="stocks_history.html">Stocks History</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" id="accountTab" href="login.html">Account</a> <!-- Add an id to the Account tab -->
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+
+    <!-- Jumbotron -->
+    <div class="jumbotron jumbotron-fluid text-center">
+        <div class="container">
+            <h1 class="display-4">Logout from Stock Helper</h1>
+        </div>
+    </div>
+
+    <!-- Graphic -->
+    <div class="container text-center">
+        <img src="images/AFFC-logo.png" id="AFFC-logo" alt="AFFC Logo" class="img-fluid mt-3" style="max-width: 50%; height: auto;">
+    </div>
+
+    <!-- Logout message -->
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-12">
+                <div id="logoutMessage" class="mt-3" style="font-size: 20px; margin-bottom: 20px;">
+                    <p id="usernamePara">Hi <span id="usernameText"></span>, are you sure you want to sign out from AFFC Stocks? <br><br>You won't be able to view your stock history or look at your favorite stocks anymore.</p>
+                </div>
+                <!-- Logout and No buttons -->
+                <div class="text-center">
+                    <button id="logoutButton" onclick="logoutAjax()" class="btn btn-primary mr-2">Logout</button>
+                    <a href="index.html" id="cancelButton" class="btn btn-secondary">Cancel</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div style="margin: 30%"></div>
+    
+    <footer class="footer mt-auto py-3">
+        <div class="container">
+            <span class="text-muted" id="logoutFooter">Copyright © 2024 Keigen Godlaski</span>
+        </div>
+    </footer>
+</body>
+</html>

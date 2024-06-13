@@ -1,0 +1,500 @@
+body {
+    background-color: #ffffff;
+    color: #142a2e;
+}
+
+.navbar {
+    background-color: #2E3944;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+  border-bottom: none; /* Remove border bottom from navbar links */
+}
+
+.navbar-dark .navbar-nav .nav-link:hover {
+  border-bottom: none; /* Remove border bottom on hover */
+}
+
+@keyframes animation {
+  from {
+    letter-spacing: 32px;
+  }
+  to {
+    letter-spacing: 0;
+  }
+}
+
+@keyframes animation {
+  from {
+    letter-spacing: 6px;
+  }
+  to {
+    letter-spacing: 0;
+  }
+}
+
+.animated {
+  animation: animation 5s ease forwards; /* Changed to forwards to retain final state after animation */
+}
+
+.jumbotron {
+  background-image: url('images/stock-background-2.jpg');
+  background-size: cover;
+  background-position: center center;
+  position: relative;
+  overflow: hidden;
+  font-family: "JetBrains Mono", monospace; /* Change font family */
+}
+
+.jumbotron::after {
+  content: "";
+  background-color: rgba(18, 78, 102, 0.90); /* Max 75% transparency for the whole image */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.jumbotron .container {
+  position: relative;
+  z-index: 1; /* Ensure text is above the overlay */
+}
+
+.jumbotron h1, .jumbotron p {
+    color: #D3D9D4;
+    animation: animation 5s ease forwards; /* Apply animation to jumbotron text */
+}
+
+.button-30 {
+  align-items: center;
+  appearance: none;
+  background-color: #FCFCFD;
+  border-radius: 4px;
+  border-width: 0;
+  box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px,rgba(45, 35, 66, 0.3) 0 7px 13px -3px,#D6D6E7 0 -3px 0 inset;
+  box-sizing: border-box;
+  color: #36395A;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: "JetBrains Mono",monospace;
+  height: 48px;
+  justify-content: center;
+  line-height: 1;
+  list-style: none;
+  overflow: hidden;
+  padding-left: 16px;
+  padding-right: 16px;
+  position: relative;
+  text-align: left;
+  text-decoration: none;
+  transition: box-shadow .15s,transform .15s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  will-change: box-shadow,transform;
+  font-size: 18px;
+}
+
+.button-30:focus {
+  box-shadow: #D6D6E7 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+}
+
+.button-30:hover {
+  box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+  transform: translateY(-2px);
+}
+
+.button-30:active {
+  box-shadow: #D6D6E7 0 3px 7px inset;
+  transform: translateY(2px);
+}
+
+.button-81 {
+    background-color: #fff;
+    border: 0 solid #e2e8f0;
+    border-radius: 1.5rem;
+    box-sizing: border-box;
+    color: #0d172a;
+    cursor: pointer;
+    display: inline-block;
+    font-family: "Basier circle",-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    font-size: 1.1rem;
+    font-weight: 600;
+    line-height: 1;
+    padding: 1rem 1.6rem;
+    text-align: center;
+    text-decoration: none #0d172a solid;
+    text-decoration-thickness: auto;
+    transition: all .1s cubic-bezier(.4, 0, .2, 1);
+    box-shadow: 0px 1px 2px rgba(166, 175, 195, 0.25);
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+  }
+  
+  .button-81:hover {
+    background-color: #1e293b;
+    color: #fff;
+  }
+  
+  @media (min-width: 768px) {
+    .button-81 {
+      font-size: 1.125rem;
+      padding: 1rem 2rem;
+    }
+  }
+
+/* Style the form inputs */
+.form-control {
+  border-radius: 20px; /* Increase border-radius for rounded text boxes */
+}
+
+/* Style the input-group */
+.input-group {
+  border-radius: 20px; /* Increase border-radius for input group */
+  overflow: hidden; /* Hide overflow to ensure rounded corners */
+}
+
+/* Style the input-group text */
+.input-group-text {
+  background-color: #ffffff; /* Match background color to form background */
+  border: none; /* Remove border */
+  font-size: 20px; /* Adjust font size */
+}
+
+/* Style the input-group text with rounded-left class */
+.input-group-text.rounded-left {
+  border-top-left-radius: 20px; /* Rounded top-left corner */
+  border-bottom-left-radius: 20px; /* Rounded bottom-left corner */
+}
+
+/* Style the input-group text with rounded-right class */
+.input-group-text.rounded-right {
+  border-top-right-radius: 20px; /* Rounded top-right corner */
+  border-bottom-right-radius: 20px; /* Rounded bottom-right corner */
+}
+
+
+/* Style the error message for username */
+.form-text.text-danger {
+  display: none; /* Initially hide the error message */
+}
+
+/* Show the error message when username is invalid */
+.invalid-username .form-text.text-danger {
+  display: block;
+}
+
+.img-caption {
+  font-style: italic;
+  font-weight: 400;
+  text-align: left;
+  margin-top: 5px;
+}
+
+ul li {
+  margin-bottom: 10px;
+}
+
+ul ul li {
+  margin-bottom: 10px;
+}
+
+.video-container {
+  position: relative;
+  width: 100%;
+  height: 75vh; /* Set the height to 75% of the viewport height */
+  overflow: hidden;
+}
+
+.video-iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.video-container iframe {
+  border: 4px solid #2E3944;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.footer {
+  background-color: #333;
+  color: #fff;
+  text-align: left;
+}
+
+.clip-text {
+  background: url(images/keigen-text-gif.gif);
+  background-size: cover;
+  background-position: center;
+  
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent; /* set to transparent, otherwise won't see the background */
+  
+  width: auto;
+  height: auto;
+  box-sizing: border-box;
+  font-weight: bold;
+  line-height: 100px;
+  flex-shrink: 0;
+}
+
+#togglePassword {
+  margin-right: 15px;
+  z-index: 2;
+}
+
+#AFFC-logo {
+  width: 100px; /* Adjust the width as needed */
+  height: auto; /* Maintain aspect ratio */
+}
+
+#usernameText, #usernamePara, #cancelButton, #logoutButton {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Logout button */
+#logoutButton {
+  background-color: #007bff; /* Solid blue color */
+  color: #fff; /* Text color */
+  font-size: 18px; /* Button font size */
+  padding: 12px 20px; /* Button padding */
+  border-radius: 8px; /* Button border radius */
+  border: 2px solid #007bff; /* Blue border */
+  margin: 5px;
+}
+
+#logoutButton:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Cancel button */
+#cancelButton {
+  background-color: #fff; /* White background */
+  color: #007bff; /* Blue text color */
+  font-size: 18px; /* Button font size */
+  padding: 12px 20px; /* Button padding */
+  border-radius: 8px; /* Button border radius */
+  border: 2px solid #007bff; /* Blue border */
+  margin: 5px;
+}
+
+#cancelButton:hover {
+  background-color: #007bff; /* Blue background on hover */
+  color: #fff; /* Text color on hover */
+}
+
+#stockHeader {
+    font-size: 45px; 
+}
+
+#logoutMessage {
+  text-align: center;
+}
+
+#logoutMessage p {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.-shape-outside {
+  shape-outside: circle(50%);
+  float: left;
+}
+
+.circle {
+  width: auto;
+  height: auto;
+  background-color: #fff;
+  border-radius: 50%;
+  margin-right: 40px;
+  overflow: hidden;
+  border: 1px solid #eee;
+}
+
+.circle img {
+  width: 100%;
+  height: 100%;
+}
+
+#section1 {
+  text-align: justify;
+  float: right; /* Float the section to the right of the logo */
+  shape-outside: none; /* Reset shape-outside property */
+}
+
+#circleText {
+  margin-right: 20px;
+  line-height: 1.65; /* 165% line height */
+}
+
+#errorMessage {
+  font-size: 20px;
+  margin-top: 20px;
+  text-align: justify;
+}
+
+#refreshMessage {
+  font-size: 20px;
+  margin-top: 20px;
+  text-align: justify;
+}
+
+#signInWarning {
+  text-align: center;
+  margin: 20px;
+}
+
+.highlighted-block {
+  background-color: #e1e1e139; /* Grey color */
+}
+
+.highlighted-block:nth-child(odd) {
+  background-color: #ffffff; /* White color */
+}
+
+/* Header styles */
+#icons {
+  font-weight: bold;
+  font-size: 24px; /* Adjust as needed */
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* Paragraph styles */
+#description {
+  font-size: 18px; /* Adjust as needed */
+  text-align: center;
+}
+
+#section2 {
+  margin-top: 50px;
+}
+
+#stockArrow {
+  width: 15px; /* Adjust the width as needed */
+  height: 15px; /* Adjust the height as needed */
+  margin-left: 10px;
+}
+
+#detailsSection {
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+#detailsHeader {
+  margin-bottom: 10px;
+}
+
+#detailsContent p {
+  margin: 5px 0;
+  padding: 5px;
+}
+
+#ascendingBtn {
+    margin-right: 20px; /* Padding to add space between buttons */
+}
+
+#openVal, #lowVal, #prevCloseDifference {
+  background-color: #f7f7f7; /* Light grey background for alternate shading */
+}
+
+#highVal, #closeVal, #volume {
+  background-color: #ffffff; /* White background for alternate shading */
+}
+
+#detailsContent p:not(:last-child) {
+  border-bottom: 1px solid #e0e0e0; /* Light line between unrelated data */
+}
+
+/* CSS for the favorite button */
+#favoriteButton {
+  margin-bottom: 20px;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  font-size:large;
+}
+
+.btn-star {
+  background-color: transparent;
+  border: 1px solid #999; /* Change border color as desired */
+  color: #333; /* Change text color as desired */
+  padding: 8px 16px; /* Adjust padding as needed */
+  font-size: 16px; /* Change font size as desired */
+  transition: all 0.3s ease; /* Smooth transition for hover effects */
+}
+
+.btn-star:hover {
+  background-color: #f0f0f0; /* Change hover background color as desired */
+  color: #000; /* Change hover text color as desired */
+  border-color: #000; /* Change hover border color as desired */
+}
+
+.btn-star:focus {
+  outline: none; /* Remove outline on focus */
+}
+
+.gold-star {
+  color: gold; /* Change star color as desired */
+}
+
+#favoriteMessage {
+  text-align: center;
+  margin: 20px;
+  font-size: 20px;
+}
+
+#favoritesList {
+  margin-bottom: 20px;
+}
+
+/* CSS for alternating row highlights */
+.highlight-row:nth-child(even) {
+  background-color: #f2f2f2; /* Light grey background for even rows */
+}
+
+/* CSS for header spacing */
+.header-spacing {
+  padding: 10px; /* Adjust the padding as needed */
+}
+
+#stockPage {
+  width: 80%;
+}
+
+#sortArrow {
+  width: 40px; /* Adjust the width as needed */
+  height: auto; /* Maintain aspect ratio */
+  margin-left: 5px; /* Add some space between the text and the arrow */
+  margin-bottom: 10px;
+}
+
+/* CSS for alternating row colors */
+.table tbody tr:nth-child(even) {
+  background-color: #f2f2f2; /* Light gray background for even rows */
+}
+
+#addedText {
+  color: #28a745; /* Green color */
+  font-weight: bold;
+}
+
+#removedText {
+  color: #dc3545; /* Red color */
+  font-weight: bold;
+}
+
+#fromLabel, #toLabel {
+  font-weight: bold;
+  font-size: 20px;
+  font-family: "JetBrains Mono", monospace;
+}

@@ -1,0 +1,124 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSE 383 Final</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="images/stock-favicon.png" type="image/png">
+    <!-- JavaScript libraries -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- Your custom JavaScript -->
+    <script src="login.js"></script>
+    <script src="ticker.js"></script>
+</head>
+<body>
+    <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <a class="navbar-brand" href="#">AFFC Stocks</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="keigen.html">Keigen</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="ethan.html">Ethan</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="stocks.html">Stocks</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="stocks_history.html">Stocks History</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" id="accountTab" href="login.html">Account</a> <!-- Add an id to the Account tab -->
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+
+    <div class="jumbotron jumbotron-fluid text-center" style="background-color: #124E66; color: #D3D9D4;">
+        <div class="container">
+            <h1 class="display-4">Stock History</h1>
+        </div>
+    </div>
+
+    <!-- Warning paragraph -->
+    <div class="container text-center">
+        <p id="signInWarning" class="text-danger"></p>
+        <button id="signInButton" class="btn btn-primary button-30" onclick="redirectToLogin()">Sign In</button>
+    </div>
+
+    <div class="container text-center">
+        <p id="noFavoriteWarning" class="text-danger"></p>
+    </div>
+
+    <div class="container mt-5">
+        <div class="row">
+            <!-- Sort Mode Column -->
+            <div class="col-md-4">
+                <!-- Sort Mode -->
+                <div class="container-fluid">
+                    <h3 id="sortMode">Sort:</h3>
+                </div>
+                <!-- Sort Buttons -->
+                <div class="mb-3 d-flex justify-content-center">
+                    <button id="ascendingBtn" class="btn btn-primary mr-2" onclick="historyASC()">Ascending Order</button>
+                    <button id="descendingBtn" class="btn btn-primary" onclick="historyDESC()">Descending Order</button>
+                </div>
+            </div>
+        
+            <!-- From Column -->
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label for="fromDate" id="fromLabel">From:</label>
+                    <input type="date" id="fromDateInput" class="form-control">
+                </div>
+            </div>
+        
+            <!-- To Column -->
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label for="toDate" id="toLabel">To:</label>
+                    <input type="date" id="toDateInput" class="form-control">
+                </div>
+            </div>
+        </div>  
+    
+        <!-- History Table -->
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Ticker 🚀</th>
+                    <th>From 📅</th>
+                    <th>To 🗓️</th>
+                    <th>Time ⏰</th>
+                    <th>Status ✨</th>                    
+                </tr>
+            </thead>
+            <tbody id="historyTableBody">
+                <!-- History entries will be dynamically added here -->
+            </tbody>
+        </table>
+    </div>    
+    
+    <div style="margin: 20%"></div>
+    <footer class="footer mt-auto py-3">
+        <div class="container">
+            <span class="text-muted">© 2024 Keigen Godlaski Ethan Varner</span>
+        </div>
+    </footer>
+</body>
+</html>
