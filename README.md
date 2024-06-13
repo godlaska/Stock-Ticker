@@ -1,4 +1,4 @@
-# cse383_final
+# Stock Ticker Application - CSE383 Final
 
 ## Project Overview
 
