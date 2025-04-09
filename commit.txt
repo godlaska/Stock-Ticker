@@ -55,3 +55,16 @@ Commit History
 - Updated keigen.html  
 - Initialized ticker.js  
 - Updated html pages and repo structure
+
+📅 May 6, 2024
+Initialized ticker.js
+
+Updated html pages and repo structure
+
+📅 May 3, 2024
+Init repo structure
+
+Initializing repo structure
+
+📅 May 1, 2024
+Initial commit
