@@ -1,3 +1,4 @@
+
 # 📈 AFFC Stocks – Stock Helper Web App
 
 **AFFC Stocks** is a full-stack web application designed as a final project for CSE383 at Miami University. Developed collaboratively by Keigen Godlaski and Ethan Varner, this application serves as a responsive, user-friendly stock portfolio management tool that integrates real-time financial data, user authentication, and interactive charts to empower users to monitor and manage their investments efficiently.
@@ -59,6 +60,7 @@
 ├── login.js                    # JavaScript for login/signup interactions
 ├── ticker.js                   # Handles stock info, news, chart logic
 ├── images.zip                  # Contains all used images
+├── images-finished             # Contains finished website images
 └── README.md                   # You're here!
 ```
 
@@ -69,46 +71,61 @@
 Here’s a preview of the AFFC Stocks web app in action:
 
 ### 🔹 Landing Page
-The entry point of the site, highlighting the purpose and features of the application.
-
-![Landing Page](images-finished/landing-page.png)
+<div align="center">
+  <img src="images-finished/landing-page.png" alt="Landing Page" style="width: 80%; height: auto;">
+  <p><em>The entry point of the site, highlighting the purpose and features of the application.</em></p>
+</div>
 
 ---
 
 ### 🔹 About Pages
 
-**Ethan's Page** – includes personal background, hobbies, coursework, and photos.  
-![Ethan's Page](images-finished/ethan-page.png)
+<div align="center">
+  <img src="images-finished/ethan-page.png" alt="Ethan's Page" style="width: 80%; height: auto;">
+  <p><em>Ethan's Page – includes personal background, hobbies, coursework, and photos.</em></p>
+</div>
 
-**Keigen's Page** – shows education background, travels, courses, and leadership role.  
-![Keigen's Page](images-finished/keigen-page.png)
+<div align="center">
+  <img src="images-finished/keigen-page.png" alt="Keigen's Page" style="width: 80%; height: auto;">
+  <p><em>Keigen's Page – shows education background, travels, courses, and leadership role.</em></p>
+</div>
 
 ---
 
 ### 🔹 Authentication
 
-**Login Page** – clean and intuitive interface with username/password validation.  
-![Login Page](images-finished/login-page.png)
+<div align="center">
+  <img src="images-finished/login-page.png" alt="Login Page" style="width: 80%; height: auto;">
+  <p><em>Login Page – clean and intuitive interface with username/password validation.</em></p>
+</div>
 
-**Signup Page** – sign-up form with confirm password and secure entry.  
-![Signup Page](images-finished/signup-page.png)
+<div align="center">
+  <img src="images-finished/signup-page.png" alt="Signup Page" style="width: 80%; height: auto;">
+  <p><em>Signup Page – sign-up form with confirm password and secure entry.</em></p>
+</div>
 
-**Logout Page** – confirmation message before logging out.  
-![Logout Page](images-finished/logout-page.png)
+<div align="center">
+  <img src="images-finished/logout-page.png" alt="Logout Page" style="width: 80%; height: auto;">
+  <p><em>Logout Page – confirmation message before logging out.</em></p>
+</div>
 
 ---
 
 ### 🔹 Stock Dashboard
 
-Search for stocks, add to favorites, view historical data, and read news articles.  
-![Stocks Page](images-finished/stock-page.png)
+<div align="center">
+  <img src="images-finished/stock-page.png" alt="Stock Dashboard" style="width: 80%; height: auto;">
+  <p><em>Search for stocks, add to favorites, view historical data, and read news articles.</em></p>
+</div>
 
 ---
 
 ### 🔹 History Tracking
 
-View stock favorite/unfavorite history with date filters and sorting options.  
-![Stock History](images-finished/stock-history.png)
+<div align="center">
+  <img src="images-finished/stock-history.png" alt="Stock History" style="width: 80%; height: auto;">
+  <p><em>View stock favorite/unfavorite history with date filters and sorting options.</em></p>
+</div>
 
 ---
 
