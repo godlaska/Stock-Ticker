@@ -1,0 +1,57 @@
+Commit History
+
+📅 May 14, 2024
+- Updated ticker.js
+- Updated UI
+- Final small CSS changes
+- Fixed news not updating
+
+📅 May 13, 2024
+- Added footer to login.html
+
+📅 May 12, 2024
+- Fixed remove from favorites logic  
+- Fixed stock_history not showing removed stocks  
+- updated ticker.js
+
+📅 May 11, 2024
+- stocks_history implemented  
+- Stock history with no date selection implemented  
+- Updated stocks.html with ticker.js logic  
+- Added daily percent difference
+
+📅 May 10, 2024
+- Updated index.html  
+- Added a new row on index.html  
+- Updated ticker.js  
+- Added basic stock history verification  
+- Updated stock ticker functionality  
+- Updated ticker.js  
+- Added a secret 🤫  
+- Bug fixes  
+- Updated login/logout functionality  
+- Added logout functionality  
+- Added login logic across website  
+- Updated login.html with login.js logic  
+- Updated index.html  
+- Updated ethan.html and others
+
+📅 May 9, 2024
+- Updated stocks.html  
+- Added show/hide password button  
+- Updated signup.html  
+- Added password confirmation to sign up
+
+📅 May 8, 2024
+- Added sign up functionality  
+- Added images  
+- Added new styling  
+- updated login logic  
+- Updated html files  
+- Added login.php and navbar integration
+
+📅 May 7, 2024
+- Updated keigen.html  
+- Updated keigen.html  
+- Initialized ticker.js  
+- Updated html pages and repo structure
