@@ -61,6 +61,7 @@
 ├── ticker.js                   # Handles stock info, news, chart logic
 ├── images.zip                  # Contains all used images
 ├── images-finished             # Contains finished website images
+├── commit.txt                  # Contains commit history log
 └── README.md                   # You're here!
 ```
 
@@ -138,4 +139,4 @@ Here’s a preview of the AFFC Stocks web app in action:
 
 ## 📌 Note
 
-This project was built for educational purposes as a final project submission for **CSE383: Web Application Programming** at Miami University. It focuses on secure authentication, dynamic data integration, and a responsive, user-friendly interface. This project was initially committed to a private GitLab so commit history is unavailable. 
+This project was built for educational purposes as a final project submission for **CSE383: Web Application Programming** at Miami University. It focuses on secure authentication, dynamic data integration, and a responsive, user-friendly interface. This project was initially committed to a private GitLab which makes actual commit history is unavailable. See the attached commit.txt for the log.
